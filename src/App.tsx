@@ -1,5 +1,5 @@
 // src/App.tsx
-import { Matriz } from './components/matriz';
+import { useState } from 'react';
 import { Resumen } from './components/resumen';
 import { Activos } from './components/activos';
 import { InyeccionSQL } from './components/inyeccionSQL';
@@ -8,55 +8,64 @@ import { Comandos } from './components/comandos';
 import { Controles } from './components/controles';
 import { Recuperacion } from './components/recuperacion';
 import { Prompts } from './components/prompts';
+import { Matriz } from './components/matriz';
 import './App.css';
 
 function App() {
+  const [activeTab, setActiveTab] = useState('informeA');
+
   return (
-    <div style={{ padding: '20px', maxWidth: '800px', margin: '0 auto', fontFamily: 'Arial, sans-serif' }}>
-      <header style={{ textAlign: 'center', marginBottom: '50px' }}>
-        <h1 style={{ color: '#2c3e50' }}>Informe de Auditoría - Inmobiliaria Terranova</h1>
-        <p>Portal de Seguridad y Gestión de Riesgos - Unidad 3</p>
-      </header>
+    <div style={{ display: 'flex', minHeight: '100vh' }}>
+      {/* Menú Lateral Inmobiliario */}
+      <nav style={{ width: '280px', backgroundColor: '#f8bbd0', padding: '30px', display: 'flex', flexDirection: 'column', gap: '20px', borderRight: '4px solid #f48fb1' }}>
+        <h2 style={{ color: '#880e4f', textAlign: 'center' }}>🏢 Terranova</h2>
+        
+        <button onClick={() => setActiveTab('informeA')} style={navButtonStyle}>Auditoría de Seguridad (A)</button>
+        <button onClick={() => setActiveTab('informeB')} style={navButtonStyle}>Propuesta Inmobiliaria (B)</button>
+      </nav>
 
-      <main>
-        <section id="resumen" style={{ marginBottom: '40px' }}>
-          <Resumen />
-        </section>
-
-        <section id="activos" style={{ marginBottom: '40px' }}>
-          <Activos />
-        </section>
-
-        {/* Sección de Vulnerabilidades */}
-        <section id="vulnerabilidades" style={{ marginBottom: '40px' }}>
-          <h2 style={{ borderBottom: '2px solid #eee', paddingBottom: '10px' }}>Análisis de Vulnerabilidades</h2>
-          <InyeccionSQL />
-          <XSS />
-          <Comandos />
-        </section>
-
-        <section id="matriz" style={{ marginBottom: '40px' }}>
-          <Matriz />
-        </section>
-
-        <section id="controles" style={{ marginBottom: '40px' }}>
-          <Controles />
-        </section>
-
-        <section id="recuperacion" style={{ marginBottom: '40px' }}>
-          <Recuperacion />
-        </section>
-
-        <section id="prompts" style={{ marginBottom: '40px' }}>
-          <Prompts />
-        </section>
+      {/* Área de Contenido */}
+      <main style={{ flex: 1, padding: '40px', backgroundColor: '#fce4ec' }}>
+        {activeTab === 'informeA' ? (
+          <div>
+            <h1 style={{ color: '#d81b60', textAlign: 'center' }}>Informe de Auditoría - Inmobiliaria Terranova</h1>
+            <Resumen />
+            <Activos />
+            <section id="vulnerabilidades">
+              <h2>Análisis de Vulnerabilidades</h2>
+              <InyeccionSQL />
+              <XSS />
+              <Comandos />
+            </section>
+            <Matriz />
+            <Controles />
+            <Recuperacion />
+            <Prompts />
+          </div>
+        ) : (
+          <div style={{ textAlign: 'center', marginTop: '50px' }}>
+            <h1 style={{ color: '#d81b60' }}>Propuesta Inmobiliaria B</h1>
+            <section>
+              <p>Bienvenida al módulo de gestión inmobiliaria.</p>
+              <p>Aquí puedes visualizar los activos y planes de expansión de Terranova.</p>
+            </section>
+          </div>
+        )}
       </main>
-
-      <footer style={{ textAlign: 'center', marginTop: '50px', fontSize: '0.8em', color: '#7f8c8d' }}>
-        <p>Proyecto de Fundamentos de Seguridad de la Información - INACAP Valparaíso</p>
-      </footer>
     </div>
   );
 }
+
+const navButtonStyle = {
+  padding: '15px',
+  borderRadius: '20px',
+  border: 'none',
+  backgroundColor: '#ffffff',
+  cursor: 'pointer',
+  fontWeight: 'bold',
+  color: '#d81b60',
+  boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+  transition: '0.3s'
+};
 
 export default App;
