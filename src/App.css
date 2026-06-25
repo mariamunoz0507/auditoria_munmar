@@ -1,9 +1,46 @@
 /* src/App.css */
 * { box-sizing: border-box; }
-body { margin: 0; padding: 0; font-family: sans-serif; background-color: #fce4ec; }
+
+body { 
+  margin: 0; 
+  padding: 0; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  background-color: #fce4ec; 
+  color: #4a148c; /* Texto oscuro para máxima legibilidad */
+}
 
 .app-container { display: flex; min-height: 100vh; }
-.sidebar { width: 250px; background-color: #f8bbd0; padding: 20px; border-right: 2px solid #f48fb1; }
+
+.sidebar { 
+  width: 250px; 
+  background-color: #f8bbd0; 
+  padding: 20px; 
+  border-right: 2px solid #f48fb1; 
+}
+
 .content { flex: 1; padding: 40px; }
-section { background: white; padding: 20px; margin-bottom: 20px; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-button { width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 10px; border: none; cursor: pointer; font-weight: bold; }
+
+section { 
+  background: white; 
+  padding: 25px; 
+  margin-bottom: 25px; 
+  border-radius: 15px; 
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  color: #333; /* Color oscuro específico para los textos internos */
+}
+
+h1, h2 { color: #880e4f; } /* Títulos en color oscuro y visible */
+
+button { 
+  width: 100%; 
+  padding: 12px; 
+  margin-bottom: 10px; 
+  border-radius: 10px; 
+  border: 1px solid #d81b60; 
+  cursor: pointer; 
+  font-weight: bold; 
+  background-color: white;
+  color: #880e4f;
+}
+
+button:hover { background-color: #fce4ec; }
