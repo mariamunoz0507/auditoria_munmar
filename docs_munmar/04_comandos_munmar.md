@@ -3,7 +3,7 @@
 ## 1. Evidencia del Ataque
 A continuación, se anexa la captura que demuestra la ejecución remota de comandos no autorizados directamente en el sistema operativo del servidor web a través del entorno DVWA.
 
-![Evidencia de Inyección de Comandos](img_munmar/comandos_munmar.png)
+![Evidencia de Inyección de Comandos](./img_munmar/comandos_munmar.png)
 
 * [cite_start]**Payload Utilizado:** `127.0.0.1; cat /etc/passwd` [cite: 33]
 * [cite_start]**Resultado Visible:** El intérprete del servidor ejecutó primero el comando de red original (el ping a 127.0.0.1) y, debido a la concatenación con el punto y coma (`;`), procesó inmediatamente el comando inyectado `cat /etc/passwd`[cite: 33]. Esto expuso en pantalla el archivo de configuración con el listado de usuarios del sistema operativo subyacente.

@@ -3,7 +3,7 @@
 ## 1. Evidencia del Ataque
 A continuación, se presenta la captura de pantalla que demuestra la explotación exitosa de la vulnerabilidad en el entorno controlado de pruebas (DVWA)[cite: 1].
 
-![Evidencia de Inyección SQL](img_munmar/sqli_munmar.png)
+![Evidencia SQLi](./img_munmar/sqli_munmar.png)
 
 * **Payload Utilizado:** `' OR '1'='1`[cite: 1]
 * **Resultado Visible:** Al ingresar este payload, la aplicación procesó el parámetro sin validarlo y expuso toda la base de datos de clientes en pantalla[cite: 1].

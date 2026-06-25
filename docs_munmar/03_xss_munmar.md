@@ -3,7 +3,7 @@
 ## 1. Evidencia del Ataque
 A continuación, se presenta la captura de pantalla que demuestra la inyección de código malicioso ejecutado en el navegador a través del entorno de pruebas controlado (DVWA).
 
-![Evidencia de XSS Reflejado](img_munmar/xss_munmar.png)
+![Evidencia XSS](./img_munmar/xss_munmar.png)
 
 * **Payload Utilizado:** `<script>alert('XSS')</script>`
 * **Resultado Visible:** La aplicación web reflejó directamente el texto ingresado en la pantalla y provocó que el navegador interpretara las etiquetas HTML, gatillando una ventana emergente de alerta.
