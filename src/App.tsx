@@ -12,7 +12,7 @@ import './App.css';
 
 function App() {
   return (
-    <div style={{ padding: '40px', maxWidth: '900px', margin: '0 auto', fontFamily: 'Arial, sans-serif' }}>
+    <div style={{ padding: '20px', maxWidth: '800px', margin: '0 auto', fontFamily: 'Arial, sans-serif' }}>
       <header style={{ textAlign: 'center', marginBottom: '50px' }}>
         <h1 style={{ color: '#2c3e50' }}>Informe de Auditoría - Inmobiliaria Terranova</h1>
         <p>Portal de Seguridad y Gestión de Riesgos - Unidad 3</p>
