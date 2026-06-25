@@ -7,6 +7,7 @@ Para Inmobiliaria Terranova, el "Portal Clientes Terranova Max" interactúa con 
 2.  **ACT-02: Servidor de Almacenamiento de Archivos (File Server):** Repositorio digital que resguarda copias en PDF de certificados de cotizaciones, escrituras de propiedades, promesas de compraventa firmadas y planos arquitectónicos técnicos de los proyectos en construcción.
 3.  **ACT-03: Servidor Web de la Aplicación (Infraestructura Core):** El servidor físico o virtual que ejecuta la aplicación en producción. Es el encargado de procesar las peticiones de los usuarios, desplegar el portal web y conectar con los sistemas internos de la inmobiliaria.
 4.  **ACT-04: API de Integración con Pasarela de Pagos:** Componente de software encargado de tokenizar y procesar las transacciones financieras para el pago de reservas de inmuebles y cuotas de pies a través de tarjetas de crédito o débito.
+5. **ACT-05: Plataforma de Correo Corporativo (SMTP):** Servicio utilizado para notificar a los clientes sobre la aprobación de créditos, envío de comprobantes de pago y reset de contraseñas.
 
 ## 2. Asociación de Amenazas y Riesgos por Industria
 En el contexto del negocio inmobiliario y de la construcción, las tres vulnerabilidades descubiertas en la auditoría técnica representan riesgos directos y catastróficos sobre estos activos de información[cite: 1]:
