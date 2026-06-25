@@ -19,29 +19,26 @@ function App() {
       <nav className="sidebar">
         <h2 style={{ color: '#880e4f' }}>🏢 Terranova</h2>
         <button onClick={() => setActiveTab('informeA')}>Auditoría (A)</button>
-        <button onClick={() => setActiveTab('informeB')}>Información (B)</button>
+        <button onClick={() => setActiveTab('informeB')}>Matriz (B)</button>
       </nav>
 
       <main className="content">
         {activeTab === 'informeA' ? (
           <div>
-            <h1>Informe de Auditoría</h1>
+            <h1>Informe de Vulnerabilidades (A)</h1>
             <Resumen />
             <Activos />
             <InyeccionSQL />
             <XSS />
             <Comandos />
-            <Matriz />
             <Controles />
             <Recuperacion />
             <Prompts />
           </div>
         ) : (
           <div>
-            <h1>Información Adicional (B)</h1>
-            <section>
-              <p>Módulo de gestión e información de Terranova.</p>
-            </section>
+            <h1>Informe de Matriz (B)</h1>
+            <Matriz />
           </div>
         )}
       </main>
