@@ -14,12 +14,12 @@ import './App.css';
 type Tab = 'resumen' | 'sqli' | 'xss' | 'comandos' | 'activos' | 'matriz' | 'controles' | 'recuperacion' | 'prompts';
 
 const navInformeA: { id: Tab; label: string; icon: string; severity?: string; sevClass?: string }[] = [
-  { id: 'resumen',   label: 'Resumen Ejecutivo', icon: '📋' },
-  { id: 'sqli',      label: 'Inyección SQL',      icon: '🗄️', severity: '8.2 ALTO',    sevClass: 'sev-high' },
-  { id: 'xss',       label: 'XSS Reflejado',      icon: '💻', severity: '6.1 MEDIO',   sevClass: 'sev-medium' },
-  { id: 'comandos',  label: 'Inyec. Comandos',    icon: '⚙️', severity: '9.8 CRÍTICO', sevClass: 'sev-critical' },
+  { id: 'resumen',   label: 'Resumen Ejecutivo',  icon: '📋' },
+  { id: 'sqli',      label: 'Inyección SQL',       icon: '🗄️', severity: '8.2 ALTO',    sevClass: 'sev-high' },
+  { id: 'xss',       label: 'XSS Reflejado',       icon: '💻', severity: '6.1 MEDIO',   sevClass: 'sev-medium' },
+  { id: 'comandos',  label: 'Inyec. Comandos',     icon: '⚙️', severity: '9.8 CRÍTICO', sevClass: 'sev-critical' },
   { id: 'controles', label: 'Prevención y Mitig.', icon: '🛡️' },
-  { id: 'prompts',   label: 'Bitácora de IA',     icon: '🤖' },
+  { id: 'prompts',   label: 'Bitácora de IA',      icon: '🤖' },
 ];
 
 const navInformeB: { id: Tab; label: string; icon: string }[] = [
@@ -76,7 +76,9 @@ function App() {
           </button>
         ))}
 
-        <div className="sidebar-section-label" style={{ marginTop: 8 }}>Informe B — Matriz de Riesgo</div>
+        <div className="sidebar-section-label" style={{ marginTop: 8 }}>
+          Informe B — Matriz de Riesgo
+        </div>
         {navInformeB.map(item => (
           <button
             key={item.id}
@@ -92,6 +94,14 @@ function App() {
           <div>TI3034 — INACAP Valparaíso</div>
           <div style={{ marginTop: 4 }}>Docente: Rubén Schnettler</div>
           <div style={{ marginTop: 4, color: 'var(--accent)' }}>Otoño 2026</div>
+          
+            href="https://github.com/mariamunoz0507/auditoria_munmar"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="github-link"
+          >
+            ⬡ Ver en GitHub
+          </a>
         </div>
       </nav>
 
