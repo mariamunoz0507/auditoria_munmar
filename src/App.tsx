@@ -95,13 +95,8 @@ function App() {
           <div style={{ marginTop: 4 }}>Docente: Rubén Schnettler</div>
           <div style={{ marginTop: 4, color: 'var(--accent)' }}>Otoño 2026</div>
           
-            href="https://github.com/mariamunoz0507/auditoria_munmar"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="github-link"
-          >
+          <a href="https://github.com/mariamunoz0507/auditoria_munmar" target="_blank" rel="noopener noreferrer" className="github-link">⬡ Ver en GitHub</a>
             ⬡ Ver en GitHub
-          </a>
         </div>
       </nav>
 
